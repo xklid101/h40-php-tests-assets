@@ -1,0 +1,20 @@
+{
+	"name": "xklid101/h40-php-tests-assets",
+	"description": "H40 apps tests helpers and other tests assets",
+	"type": "library",
+	"license": ["MIT"],
+	"authors": [
+        {
+            "name": "xklid101"
+        }
+    ],
+	"require": {
+		"php": ">= 7.2"
+	},
+	"minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Xklid101\\H40\\PhpTestsAssets\\": "src/"
+        }
+    }
+}
