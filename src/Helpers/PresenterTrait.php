@@ -40,7 +40,7 @@ trait PresenterTrait
         $action = substr($destination, $pos + 1) ?: 'default';
         $method = $post ? 'POST' : 'GET';
 
-        $container = $GLOBALS['__h40tests__container'];
+        $container = $GLOBALS['__h40tests__nette_container'];
         $container->removeService('httpRequest');
 
         /**
@@ -390,7 +390,7 @@ trait PresenterTrait
             $identity = new \Nette\Security\Identity($id, $roles, $data);
         }
         /** @var \Nette\Security\User $user */
-        $user = $GLOBALS['__h40tests__container']->getByType('Nette\Security\User');
+        $user = $GLOBALS['__h40tests__nette_container']->getByType('Nette\Security\User');
         $user->login($identity);
         return $user;
     }
@@ -401,7 +401,7 @@ trait PresenterTrait
     protected function logOut()
     {
         /** @var \Nette\Security\User $user */
-        $user = $GLOBALS['__h40tests__container']->getByType('Nette\Security\User');
+        $user = $GLOBALS['__h40tests__nette_container']->getByType('Nette\Security\User');
         $user->logout();
         return $user;
     }
